@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -x
+set -e
+
+test -d ./usr/share/tb-binary
+
+shopt -s dotglob
+shopt -s nullglob
+
+for file_name in ./usr/share/tb-binary/* ; do
+   trash-put file_name
+done
+
+tb_downloaded_files_folder=./usr/share/tb-binary \
+   update-torbrowser \
+      --nokilltb \
+      --no-install \
+      --no-tor-con-check \
+      --input none \
+      "$@"
+
+true "OK"

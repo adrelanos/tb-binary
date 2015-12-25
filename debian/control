@@ -1,0 +1,22 @@
+## This file is part of Whonix.
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+Source: tb-binary
+Section: misc
+Priority: optional
+Maintainer: Patrick Schleizer <adrelanos@riseup.net>
+Build-Depends: debhelper (>= 9), faketime, genmkfile
+Homepage: https://github.com/Whonix/tb-binary
+Vcs-Browser: https://github.com/Whonix/tb-binary
+Vcs-Git: https://github.com/Whonix/tb-binary.git
+Standards-Version: 3.9.6
+
+Package: tb-binary
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: tb-starter, tb-updater
+Suggests: tb-default-browser, open-link-confirmation
+Description: Tor Browser Bundle (TBB) binaries
+ This package is produced independently of, and carries no guarantee from,
+ The Tor Project.
